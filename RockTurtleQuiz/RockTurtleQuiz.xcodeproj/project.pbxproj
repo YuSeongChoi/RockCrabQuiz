@@ -11,6 +11,9 @@
 		5D1E98512C9411F3001FA1CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1E98502C9411F3001FA1CF /* ContentView.swift */; };
 		5D1E98532C9411F4001FA1CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D1E98522C9411F4001FA1CF /* Assets.xcassets */; };
 		5D1E98572C9411F4001FA1CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D1E98562C9411F4001FA1CF /* Preview Assets.xcassets */; };
+		5D1E985F2C942052001FA1CF /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 5D1E985E2C942052001FA1CF /* ComposableArchitecture */; };
+		5D1E98642C942F2C001FA1CF /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1E98632C942F2C001FA1CF /* QuizView.swift */; };
+		5D1E98662C942F32001FA1CF /* QuizReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1E98652C942F32001FA1CF /* QuizReducer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,8 @@
 		5D1E98522C9411F4001FA1CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D1E98542C9411F4001FA1CF /* RockTurtleQuiz.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RockTurtleQuiz.entitlements; sourceTree = "<group>"; };
 		5D1E98562C9411F4001FA1CF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5D1E98632C942F2C001FA1CF /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		5D1E98652C942F32001FA1CF /* QuizReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizReducer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D1E985F2C942052001FA1CF /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +60,8 @@
 			children = (
 				5D1E984E2C9411F3001FA1CF /* RockTurtleQuizApp.swift */,
 				5D1E98502C9411F3001FA1CF /* ContentView.swift */,
+				5D1E98612C942F13001FA1CF /* Reducers */,
+				5D1E98602C942F0A001FA1CF /* Views */,
 				5D1E98522C9411F4001FA1CF /* Assets.xcassets */,
 				5D1E98542C9411F4001FA1CF /* RockTurtleQuiz.entitlements */,
 				5D1E98552C9411F4001FA1CF /* Preview Content */,
@@ -67,6 +75,22 @@
 				5D1E98562C9411F4001FA1CF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5D1E98602C942F0A001FA1CF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5D1E98632C942F2C001FA1CF /* QuizView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5D1E98612C942F13001FA1CF /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+				5D1E98652C942F32001FA1CF /* QuizReducer.swift */,
+			);
+			path = Reducers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +109,9 @@
 			dependencies = (
 			);
 			name = RockTurtleQuiz;
+			packageProductDependencies = (
+				5D1E985E2C942052001FA1CF /* ComposableArchitecture */,
+			);
 			productName = RockTurtleQuiz;
 			productReference = 5D1E984B2C9411F3001FA1CF /* RockTurtleQuiz.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +140,9 @@
 				Base,
 			);
 			mainGroup = 5D1E98422C9411F3001FA1CF;
+			packageReferences = (
+				5D1E985D2C942052001FA1CF /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 5D1E984C2C9411F3001FA1CF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -141,6 +171,8 @@
 			files = (
 				5D1E98512C9411F3001FA1CF /* ContentView.swift in Sources */,
 				5D1E984F2C9411F3001FA1CF /* RockTurtleQuizApp.swift in Sources */,
+				5D1E98642C942F2C001FA1CF /* QuizView.swift in Sources */,
+				5D1E98662C942F32001FA1CF /* QuizReducer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +391,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5D1E985D2C942052001FA1CF /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture#Installation";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.15.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5D1E985E2C942052001FA1CF /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D1E985D2C942052001FA1CF /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5D1E98432C9411F3001FA1CF /* Project object */;
 }
