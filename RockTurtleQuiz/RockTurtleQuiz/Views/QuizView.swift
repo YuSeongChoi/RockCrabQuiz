@@ -7,9 +7,18 @@
 
 import SwiftUI
 
+import RswiftResources
+
 struct QuizView: View {
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Image(R.image.마니또)
+                .resizable()
+                .scaledToFit()
+            Text("마니또 의상 맞추기")
+        }
     }
 }
 

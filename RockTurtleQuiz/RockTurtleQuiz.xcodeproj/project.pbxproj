@@ -8,23 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		5D1E984F2C9411F3001FA1CF /* RockTurtleQuizApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1E984E2C9411F3001FA1CF /* RockTurtleQuizApp.swift */; };
-		5D1E98512C9411F3001FA1CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1E98502C9411F3001FA1CF /* ContentView.swift */; };
 		5D1E98532C9411F4001FA1CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D1E98522C9411F4001FA1CF /* Assets.xcassets */; };
 		5D1E98572C9411F4001FA1CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D1E98562C9411F4001FA1CF /* Preview Assets.xcassets */; };
 		5D1E985F2C942052001FA1CF /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 5D1E985E2C942052001FA1CF /* ComposableArchitecture */; };
 		5D1E98642C942F2C001FA1CF /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1E98632C942F2C001FA1CF /* QuizView.swift */; };
 		5D1E98662C942F32001FA1CF /* QuizReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1E98652C942F32001FA1CF /* QuizReducer.swift */; };
+		62D84C992C9957C800E56E56 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 62D84C982C9957C800E56E56 /* RswiftLibrary */; };
+		62D84CAD2C99608300E56E56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D84CAC2C99608300E56E56 /* AppDelegate.swift */; };
+		62D84CB02C9960DC00E56E56 /* WindowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D84CAF2C9960DC00E56E56 /* WindowDelegate.swift */; };
+		62D84CB22C9961CE00E56E56 /* RockTurtleQuizResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D84CB12C9961CE00E56E56 /* RockTurtleQuizResources.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5D1E984B2C9411F3001FA1CF /* RockTurtleQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RockTurtleQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D1E984E2C9411F3001FA1CF /* RockTurtleQuizApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockTurtleQuizApp.swift; sourceTree = "<group>"; };
-		5D1E98502C9411F3001FA1CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5D1E98522C9411F4001FA1CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D1E98542C9411F4001FA1CF /* RockTurtleQuiz.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RockTurtleQuiz.entitlements; sourceTree = "<group>"; };
 		5D1E98562C9411F4001FA1CF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5D1E98632C942F2C001FA1CF /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		5D1E98652C942F32001FA1CF /* QuizReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizReducer.swift; sourceTree = "<group>"; };
+		62D84CAC2C99608300E56E56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		62D84CAF2C9960DC00E56E56 /* WindowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowDelegate.swift; sourceTree = "<group>"; };
+		62D84CB12C9961CE00E56E56 /* RockTurtleQuizResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockTurtleQuizResources.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +38,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D1E985F2C942052001FA1CF /* ComposableArchitecture in Frameworks */,
+				62D84C992C9957C800E56E56 /* RswiftLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +64,10 @@
 		5D1E984D2C9411F3001FA1CF /* RockTurtleQuiz */ = {
 			isa = PBXGroup;
 			children = (
-				5D1E984E2C9411F3001FA1CF /* RockTurtleQuizApp.swift */,
-				5D1E98502C9411F3001FA1CF /* ContentView.swift */,
+				62D84C9D2C995C8E00E56E56 /* App */,
 				5D1E98612C942F13001FA1CF /* Reducers */,
 				5D1E98602C942F0A001FA1CF /* Views */,
-				5D1E98522C9411F4001FA1CF /* Assets.xcassets */,
-				5D1E98542C9411F4001FA1CF /* RockTurtleQuiz.entitlements */,
+				62D84C9E2C995C9F00E56E56 /* Resources */,
 				5D1E98552C9411F4001FA1CF /* Preview Content */,
 			);
 			path = RockTurtleQuiz;
@@ -93,6 +97,26 @@
 			path = Reducers;
 			sourceTree = "<group>";
 		};
+		62D84C9D2C995C8E00E56E56 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5D1E984E2C9411F3001FA1CF /* RockTurtleQuizApp.swift */,
+				62D84CAC2C99608300E56E56 /* AppDelegate.swift */,
+				62D84CAF2C9960DC00E56E56 /* WindowDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		62D84C9E2C995C9F00E56E56 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5D1E98522C9411F4001FA1CF /* Assets.xcassets */,
+				5D1E98542C9411F4001FA1CF /* RockTurtleQuiz.entitlements */,
+				62D84CB12C9961CE00E56E56 /* RockTurtleQuizResources.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -107,10 +131,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				62D84C9B2C9957F900E56E56 /* PBXTargetDependency */,
 			);
 			name = RockTurtleQuiz;
 			packageProductDependencies = (
 				5D1E985E2C942052001FA1CF /* ComposableArchitecture */,
+				62D84C982C9957C800E56E56 /* RswiftLibrary */,
 			);
 			productName = RockTurtleQuiz;
 			productReference = 5D1E984B2C9411F3001FA1CF /* RockTurtleQuiz.app */;
@@ -142,6 +168,7 @@
 			mainGroup = 5D1E98422C9411F3001FA1CF;
 			packageReferences = (
 				5D1E985D2C942052001FA1CF /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				62D84C972C9957C800E56E56 /* XCRemoteSwiftPackageReference "R" */,
 			);
 			productRefGroup = 5D1E984C2C9411F3001FA1CF /* Products */;
 			projectDirPath = "";
@@ -169,14 +196,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D1E98512C9411F3001FA1CF /* ContentView.swift in Sources */,
+				62D84CAD2C99608300E56E56 /* AppDelegate.swift in Sources */,
+				62D84CB22C9961CE00E56E56 /* RockTurtleQuizResources.swift in Sources */,
 				5D1E984F2C9411F3001FA1CF /* RockTurtleQuizApp.swift in Sources */,
+				62D84CB02C9960DC00E56E56 /* WindowDelegate.swift in Sources */,
 				5D1E98642C942F2C001FA1CF /* QuizView.swift in Sources */,
 				5D1E98662C942F32001FA1CF /* QuizReducer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		62D84C9B2C9957F900E56E56 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 62D84C9A2C9957F900E56E56 /* RswiftGenerateInternalResources */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		5D1E98582C9411F4001FA1CF /* Debug */ = {
@@ -298,11 +334,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = RockTurtleQuiz/RockTurtleQuiz.entitlements;
+				CODE_SIGN_ENTITLEMENTS = RockTurtleQuiz/Resources/RockTurtleQuiz.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RockTurtleQuiz/Preview Content\"";
-				DEVELOPMENT_TEAM = Y3SM86Y3Q4;
+				DEVELOPMENT_TEAM = 8N7PD4AXR6;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -336,11 +372,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = RockTurtleQuiz/RockTurtleQuiz.entitlements;
+				CODE_SIGN_ENTITLEMENTS = RockTurtleQuiz/Resources/RockTurtleQuiz.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RockTurtleQuiz/Preview Content\"";
-				DEVELOPMENT_TEAM = Y3SM86Y3Q4;
+				DEVELOPMENT_TEAM = 8N7PD4AXR6;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -401,6 +437,14 @@
 				minimumVersion = 1.15.0;
 			};
 		};
+		62D84C972C9957C800E56E56 /* XCRemoteSwiftPackageReference "R" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.5.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -408,6 +452,15 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5D1E985D2C942052001FA1CF /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
+		};
+		62D84C982C9957C800E56E56 /* RswiftLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 62D84C972C9957C800E56E56 /* XCRemoteSwiftPackageReference "R" */;
+			productName = RswiftLibrary;
+		};
+		62D84C9A2C9957F900E56E56 /* RswiftGenerateInternalResources */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "plugin:RswiftGenerateInternalResources";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
