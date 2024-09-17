@@ -13,14 +13,13 @@ struct QuizView: View {
     
     
     var body: some View {
-        VStack {
-            Image(R.image.마니또)
-                .resizable()
-                .scaledToFit()
-            Text("마니또 의상 맞추기")
+        VStack(spacing: 20) {
+            Text("바위게 퀴즈 - 무대의상 맞추기")
+                .font(R.font.pretendardSemiBold.swiftFontOfSize(22))
         }
     }
 }
+
 
 #Preview {
     QuizView()
