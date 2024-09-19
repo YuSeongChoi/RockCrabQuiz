@@ -16,7 +16,7 @@ struct HomeView: View {
                 .font(R.font.pretendardSemiBold.swiftFontOfSize(22))
             
             VStack(spacing: 30) {
-                R.image.마니또.swiftImage
+                R.image.마니또.swiftImage
                     .resizable()
                     .scaledToFit()
                 
