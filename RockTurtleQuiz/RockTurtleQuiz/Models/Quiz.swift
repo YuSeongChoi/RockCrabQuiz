@@ -48,7 +48,7 @@ extension Question {
         .init(imageName: R.image.부산대.name, correctAnswer: 3, options: ["영남대", "경북대", "부산대", "부산외대"]),
         .init(imageName: R.image.부산외대.name, correctAnswer: 4, options: ["대림대", "부산대", "인하대", "부산외대"]),
         .init(imageName: R.image.서울팝콘.name, correctAnswer: 1, options: ["서울팝콘", "경기모아 뮤직 페스티벌", "발로란트", "펜타포트"]),
-        .init(imageName: R.image.섬의날.name, correctAnswer: 2, options: ["악어의 놀이터2", "섬의날", "카스쿨", "경기모아 뮤직 페스티벌"]),
+        .init(imageName: R.image.섬의날.name, correctAnswer: 2, options: ["펜타포트", "섬의날", "서울팝콘", "경기모아 뮤직 페스티벌"]),
         .init(imageName: R.image.스쿨어택.name, correctAnswer: 3, options: ["펜타포트", "경기모아 뮤직 페스티벌", "스쿨어택", "자라섬"]),
         .init(imageName: R.image.악어의놀이터2.name, correctAnswer: 4, options: ["띵타이쿤", "멋봉리", "악어의 놀이터1", "악어의 놀이터2"]),
         .init(imageName: R.image.영남대.name, correctAnswer: 1, options: ["영남대", "경북대", "조선대", "부산대"]),

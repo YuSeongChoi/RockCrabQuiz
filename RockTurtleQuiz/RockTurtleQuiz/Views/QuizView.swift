@@ -22,6 +22,10 @@ struct QuizView: View {
         Group {
             if viewModel.showResult {
                 VStack(spacing: 50) {
+                    R.image.마니또.swiftImage
+                        .resizable()
+                        .scaledToFit()
+                    
                     Text("총 22문제중에 \(viewModel.score)문제를 맞추셨습니다!")
                         .font(R.font.pretendardBold.swiftFontOfSize(20))
                     
@@ -40,6 +44,7 @@ struct QuizView: View {
                         .resizable()
                         .scaledToFit()
                         .cornerRadius(10)
+                        .animation(.default, value: viewModel.currentQuestion.imageName)
                     
                     LazyVGrid(columns: columns, spacing: 10) {
                         ForEach(0..<4, id: \.self) { index in
