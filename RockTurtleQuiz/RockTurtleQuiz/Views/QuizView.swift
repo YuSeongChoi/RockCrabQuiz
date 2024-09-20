@@ -10,12 +10,36 @@ import SwiftUI
 import RswiftResources
 
 struct QuizView: View {
-    
+    @StateObject private var viewModel = QuizViewModel()
     
     var body: some View {
-        VStack(spacing: 20) {
-            Text("바위게 퀴즈 - 무대의상 맞추기")
-                .font(R.font.pretendardSemiBold.swiftFontOfSize(22))
+        Group {
+            if viewModel.showResult {
+                Text("최종 점수는 \(viewModel.score)점 입니다!!!")
+                    .font(R.font.pretendardBold.swiftFontOfSize(24))
+            } else {
+                VStack(spacing: 20) {
+                    Image(viewModel.currentQuestion.imageName)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 300, height: 300)
+                        .padding()
+                    
+                    ForEach(0..<4, id: \.self) { index in
+                        Button {
+                            viewModel.selectAnswer(index + 1)
+                        } label: {
+                            Text(viewModel.currentQuestion.options[index])
+                                .padding()
+                        }
+                    }
+                    
+                    Button("다음") {
+                        viewModel.nextQuestion()
+                    }
+                    .disabled(viewModel.selectedAnswer == nil)
+                }
+            }
         }
     }
 }

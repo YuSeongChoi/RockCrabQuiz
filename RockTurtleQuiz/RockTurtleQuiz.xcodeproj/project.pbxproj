@@ -31,6 +31,7 @@
 		5D1E988C2C996303001FA1CF /* NotoSansCJKkr-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5D1E987A2C996303001FA1CF /* NotoSansCJKkr-Regular.otf */; };
 		5D1E988D2C996303001FA1CF /* NotoSansCJKkr-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5D1E987B2C996303001FA1CF /* NotoSansCJKkr-Bold.otf */; };
 		5D1E988E2C996303001FA1CF /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5D1E987C2C996303001FA1CF /* Pretendard-SemiBold.otf */; };
+		5DE0241C2C9D118100472395 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE0241B2C9D118100472395 /* QuizViewModel.swift */; };
 		62D84C992C9957C800E56E56 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 62D84C982C9957C800E56E56 /* RswiftLibrary */; };
 		62D84CAD2C99608300E56E56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D84CAC2C99608300E56E56 /* AppDelegate.swift */; };
 		62D84CB02C9960DC00E56E56 /* WindowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D84CAF2C9960DC00E56E56 /* WindowDelegate.swift */; };
@@ -66,6 +67,7 @@
 		5D1E987A2C996303001FA1CF /* NotoSansCJKkr-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Regular.otf"; sourceTree = "<group>"; };
 		5D1E987B2C996303001FA1CF /* NotoSansCJKkr-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Bold.otf"; sourceTree = "<group>"; };
 		5D1E987C2C996303001FA1CF /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		5DE0241B2C9D118100472395 /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
 		62D84CAC2C99608300E56E56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62D84CAF2C9960DC00E56E56 /* WindowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowDelegate.swift; sourceTree = "<group>"; };
 		62D84CB12C9961CE00E56E56 /* RockTurtleQuizResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockTurtleQuizResources.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			children = (
 				62D84CB72C9968DC00E56E56 /* HomeView.swift */,
 				5D1E98632C942F2C001FA1CF /* QuizView.swift */,
+				5DE0241B2C9D118100472395 /* QuizViewModel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				62D84CBE2C996BB100E56E56 /* Quiz.swift in Sources */,
 				62D84CAD2C99608300E56E56 /* AppDelegate.swift in Sources */,
 				62D84CB22C9961CE00E56E56 /* RockTurtleQuizResources.swift in Sources */,
+				5DE0241C2C9D118100472395 /* QuizViewModel.swift in Sources */,
 				62D84CB52C99659A00E56E56 /* SwiftUI+Resources.swift in Sources */,
 				5D1E984F2C9411F3001FA1CF /* RockTurtleQuizApp.swift in Sources */,
 				62D84CB02C9960DC00E56E56 /* WindowDelegate.swift in Sources */,
