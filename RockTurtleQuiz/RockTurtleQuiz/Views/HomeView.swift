@@ -19,22 +19,24 @@ struct HomeView: View {
                 R.image.마니또.swiftImage
                     .resizable()
                     .scaledToFit()
+                    .cornerRadius(10)
                 
                 NavigationLink {
                     QuizView()
                 } label: {
-                    RoundedRectangle(cornerRadius: 5)
+                    RoundedRectangle(cornerRadius: 10)
                         .frame(maxWidth: .infinity)
                         .frame(height: 55)
                         .foregroundStyle(.pink.opacity(0.8))
                         .overlay(
                             Text("시작하기")
                                 .font(R.font.pretendardSemiBold.swiftFontOfSize(18))
-                                .foregroundStyle(.black)
+                                .foregroundStyle(.white)
                         )
                 }
             }
         }
+        .padding(.horizontal, 22)
     }
 }
 

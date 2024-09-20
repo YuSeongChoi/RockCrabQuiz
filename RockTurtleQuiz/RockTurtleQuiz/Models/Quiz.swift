@@ -33,6 +33,7 @@ struct Question: Equatable, Identifiable {
 }
 
 extension Question {
+    /// 22문제
     static let questions: [Question] = [
         .init(imageName: R.image.강진하맥축제.name, correctAnswer: 1, options: ["강진하맥축제", "경기모아 뮤직 페스티벌", "스쿨어택", "해균교육사령부"]),
         .init(imageName: R.image.건국대.name, correctAnswer: 2, options: ["경북대", "건국대", "계명대", "영남대"]),
