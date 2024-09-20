@@ -37,6 +37,7 @@
 		62D84CB22C9961CE00E56E56 /* RockTurtleQuizResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D84CB12C9961CE00E56E56 /* RockTurtleQuizResources.swift */; };
 		62D84CB52C99659A00E56E56 /* SwiftUI+Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D84CB42C99659A00E56E56 /* SwiftUI+Resources.swift */; };
 		62D84CB82C9968DC00E56E56 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D84CB72C9968DC00E56E56 /* HomeView.swift */; };
+		62D84CBE2C996BB100E56E56 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D84CBD2C996BB100E56E56 /* Quiz.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		62D84CB12C9961CE00E56E56 /* RockTurtleQuizResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockTurtleQuizResources.swift; sourceTree = "<group>"; };
 		62D84CB42C99659A00E56E56 /* SwiftUI+Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI+Resources.swift"; sourceTree = "<group>"; };
 		62D84CB72C9968DC00E56E56 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		62D84CBD2C996BB100E56E56 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				62D84C9D2C995C8E00E56E56 /* App */,
 				5D1E98612C942F13001FA1CF /* Reducers */,
 				5D1E98602C942F0A001FA1CF /* Views */,
+				62D84CBB2C996BA200E56E56 /* Models */,
 				62D84C9E2C995C9F00E56E56 /* Resources */,
 				5D1E98552C9411F4001FA1CF /* Preview Content */,
 			);
@@ -183,6 +186,14 @@
 				62D84CB42C99659A00E56E56 /* SwiftUI+Resources.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		62D84CBB2C996BA200E56E56 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				62D84CBD2C996BB100E56E56 /* Quiz.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62D84CBE2C996BB100E56E56 /* Quiz.swift in Sources */,
 				62D84CAD2C99608300E56E56 /* AppDelegate.swift in Sources */,
 				62D84CB22C9961CE00E56E56 /* RockTurtleQuizResources.swift in Sources */,
 				62D84CB52C99659A00E56E56 /* SwiftUI+Resources.swift in Sources */,
