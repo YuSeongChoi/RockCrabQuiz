@@ -42,7 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5D1E984B2C9411F3001FA1CF /* RockTurtleQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RockTurtleQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D1E984B2C9411F3001FA1CF /* RockCrabQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RockCrabQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D1E984E2C9411F3001FA1CF /* RockTurtleQuizApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockTurtleQuizApp.swift; sourceTree = "<group>"; };
 		5D1E98522C9411F4001FA1CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D1E98542C9411F4001FA1CF /* RockTurtleQuiz.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RockTurtleQuiz.entitlements; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 		5D1E98422C9411F3001FA1CF = {
 			isa = PBXGroup;
 			children = (
-				5D1E984D2C9411F3001FA1CF /* RockTurtleQuiz */,
+				5D1E984D2C9411F3001FA1CF /* RockCrabQuiz */,
 				5D1E984C2C9411F3001FA1CF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -101,12 +101,12 @@
 		5D1E984C2C9411F3001FA1CF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5D1E984B2C9411F3001FA1CF /* RockTurtleQuiz.app */,
+				5D1E984B2C9411F3001FA1CF /* RockCrabQuiz.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5D1E984D2C9411F3001FA1CF /* RockTurtleQuiz */ = {
+		5D1E984D2C9411F3001FA1CF /* RockCrabQuiz */ = {
 			isa = PBXGroup;
 			children = (
 				5DE024212C9D608A00472395 /* Info.plist */,
@@ -117,7 +117,7 @@
 				62D84C9E2C995C9F00E56E56 /* Resources */,
 				5D1E98552C9411F4001FA1CF /* Preview Content */,
 			);
-			path = RockTurtleQuiz;
+			path = RockCrabQuiz;
 			sourceTree = "<group>";
 		};
 		5D1E98552C9411F4001FA1CF /* Preview Content */ = {
@@ -204,9 +204,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5D1E984A2C9411F3001FA1CF /* RockTurtleQuiz */ = {
+		5D1E984A2C9411F3001FA1CF /* RockCrabQuiz */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5D1E985A2C9411F4001FA1CF /* Build configuration list for PBXNativeTarget "RockTurtleQuiz" */;
+			buildConfigurationList = 5D1E985A2C9411F4001FA1CF /* Build configuration list for PBXNativeTarget "RockCrabQuiz" */;
 			buildPhases = (
 				5D1E98472C9411F3001FA1CF /* Sources */,
 				5D1E98482C9411F3001FA1CF /* Frameworks */,
@@ -217,13 +217,13 @@
 			dependencies = (
 				62D84C9B2C9957F900E56E56 /* PBXTargetDependency */,
 			);
-			name = RockTurtleQuiz;
+			name = RockCrabQuiz;
 			packageProductDependencies = (
 				5D1E985E2C942052001FA1CF /* ComposableArchitecture */,
 				62D84C982C9957C800E56E56 /* RswiftLibrary */,
 			);
 			productName = RockTurtleQuiz;
-			productReference = 5D1E984B2C9411F3001FA1CF /* RockTurtleQuiz.app */;
+			productReference = 5D1E984B2C9411F3001FA1CF /* RockCrabQuiz.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -241,7 +241,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5D1E98462C9411F3001FA1CF /* Build configuration list for PBXProject "RockTurtleQuiz" */;
+			buildConfigurationList = 5D1E98462C9411F3001FA1CF /* Build configuration list for PBXProject "RockCrabQuiz" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -258,7 +258,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5D1E984A2C9411F3001FA1CF /* RockTurtleQuiz */,
+				5D1E984A2C9411F3001FA1CF /* RockCrabQuiz */,
 			);
 		};
 /* End PBXProject section */
@@ -440,16 +440,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = RockTurtleQuiz/Resources/RockTurtleQuiz.entitlements;
+				CODE_SIGN_ENTITLEMENTS = RockCrabQuiz/Resources/RockTurtleQuiz.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"RockTurtleQuiz/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"RockCrabQuiz/Preview Content\"";
 				DEVELOPMENT_TEAM = 23Z89DEDAB;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RockTurtleQuiz/Info.plist;
+				INFOPLIST_FILE = RockCrabQuiz/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "바위게 퀴즈";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -467,7 +467,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ys.RockTurtleQuiz;
+				PRODUCT_BUNDLE_IDENTIFIER = ys.RockCrabQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -482,16 +482,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = RockTurtleQuiz/Resources/RockTurtleQuiz.entitlements;
+				CODE_SIGN_ENTITLEMENTS = RockCrabQuiz/Resources/RockTurtleQuiz.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"RockTurtleQuiz/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"RockCrabQuiz/Preview Content\"";
 				DEVELOPMENT_TEAM = 23Z89DEDAB;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RockTurtleQuiz/Info.plist;
+				INFOPLIST_FILE = RockCrabQuiz/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "바위게 퀴즈";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -509,7 +509,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ys.RockTurtleQuiz;
+				PRODUCT_BUNDLE_IDENTIFIER = ys.RockCrabQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -522,7 +522,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5D1E98462C9411F3001FA1CF /* Build configuration list for PBXProject "RockTurtleQuiz" */ = {
+		5D1E98462C9411F3001FA1CF /* Build configuration list for PBXProject "RockCrabQuiz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5D1E98582C9411F4001FA1CF /* Debug */,
@@ -531,7 +531,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5D1E985A2C9411F4001FA1CF /* Build configuration list for PBXNativeTarget "RockTurtleQuiz" */ = {
+		5D1E985A2C9411F4001FA1CF /* Build configuration list for PBXNativeTarget "RockCrabQuiz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5D1E985B2C9411F4001FA1CF /* Debug */,
