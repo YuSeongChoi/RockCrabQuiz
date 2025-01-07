@@ -13,7 +13,7 @@ struct HomeView: View {
     var body: some View {
         VStack(spacing: 30) {
             Text("바위게 퀴즈 - 무대의상 맞추기")
-                .font(R.font.pretendardSemiBold.swiftFontOfSize(22))
+                .pretendSemiBold(size: 22)
             
             R.image.마니또.swiftImage
                 .resizable()
@@ -29,7 +29,7 @@ struct HomeView: View {
                     .foregroundStyle(.pink.opacity(0.8))
                     .overlay(
                         Text("시작하기")
-                            .font(R.font.pretendardSemiBold.swiftFontOfSize(18))
+                            .pretendSemiBold(size: 18)
                             .foregroundStyle(.white)
                     )
             }
