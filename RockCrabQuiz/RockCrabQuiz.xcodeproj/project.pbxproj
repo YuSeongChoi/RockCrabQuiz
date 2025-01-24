@@ -31,6 +31,10 @@
 		5D1E988C2C996303001FA1CF /* NotoSansCJKkr-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5D1E987A2C996303001FA1CF /* NotoSansCJKkr-Regular.otf */; };
 		5D1E988D2C996303001FA1CF /* NotoSansCJKkr-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5D1E987B2C996303001FA1CF /* NotoSansCJKkr-Bold.otf */; };
 		5D1E988E2C996303001FA1CF /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5D1E987C2C996303001FA1CF /* Pretendard-SemiBold.otf */; };
+		5D24DE1D2D3F929700178F6C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D24DE1C2D3F929700178F6C /* GoogleService-Info.plist */; };
+		5D24DE342D43738100178F6C /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5D24DE332D43738100178F6C /* FirebaseAnalytics */; };
+		5D24DE362D43738100178F6C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5D24DE352D43738100178F6C /* FirebaseAuth */; };
+		5D24DE382D43738100178F6C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 5D24DE372D43738100178F6C /* FirebaseFirestore */; };
 		5D5447D02D2D0112009CFEF5 /* SwiftUI+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5447CF2D2D0112009CFEF5 /* SwiftUI+Extension.swift */; };
 		5DE0241C2C9D118100472395 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE0241B2C9D118100472395 /* QuizViewModel.swift */; };
 		62D84C992C9957C800E56E56 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 62D84C982C9957C800E56E56 /* RswiftLibrary */; };
@@ -68,6 +72,7 @@
 		5D1E987A2C996303001FA1CF /* NotoSansCJKkr-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Regular.otf"; sourceTree = "<group>"; };
 		5D1E987B2C996303001FA1CF /* NotoSansCJKkr-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Bold.otf"; sourceTree = "<group>"; };
 		5D1E987C2C996303001FA1CF /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		5D24DE1C2D3F929700178F6C /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5D5447CF2D2D0112009CFEF5 /* SwiftUI+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI+Extension.swift"; sourceTree = "<group>"; };
 		5DE0241B2C9D118100472395 /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
 		5DE024212C9D608A00472395 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,6 +91,9 @@
 			files = (
 				5D1E985F2C942052001FA1CF /* ComposableArchitecture in Frameworks */,
 				62D84C992C9957C800E56E56 /* RswiftLibrary in Frameworks */,
+				5D24DE342D43738100178F6C /* FirebaseAnalytics in Frameworks */,
+				5D24DE382D43738100178F6C /* FirebaseFirestore in Frameworks */,
+				5D24DE362D43738100178F6C /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +103,7 @@
 		5D1E98422C9411F3001FA1CF = {
 			isa = PBXGroup;
 			children = (
+				5D24DE1C2D3F929700178F6C /* GoogleService-Info.plist */,
 				5D1E984D2C9411F3001FA1CF /* RockCrabQuiz */,
 				5D1E984C2C9411F3001FA1CF /* Products */,
 			);
@@ -232,6 +241,9 @@
 			packageProductDependencies = (
 				5D1E985E2C942052001FA1CF /* ComposableArchitecture */,
 				62D84C982C9957C800E56E56 /* RswiftLibrary */,
+				5D24DE332D43738100178F6C /* FirebaseAnalytics */,
+				5D24DE352D43738100178F6C /* FirebaseAuth */,
+				5D24DE372D43738100178F6C /* FirebaseFirestore */,
 			);
 			productName = RockTurtleQuiz;
 			productReference = 5D1E984B2C9411F3001FA1CF /* RockCrabQuiz.app */;
@@ -264,6 +276,7 @@
 			packageReferences = (
 				5D1E985D2C942052001FA1CF /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 				62D84C972C9957C800E56E56 /* XCRemoteSwiftPackageReference "R" */,
+				5D24DE322D43738100178F6C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 5D1E984C2C9411F3001FA1CF /* Products */;
 			projectDirPath = "";
@@ -299,6 +312,7 @@
 				5D1E98852C996303001FA1CF /* Lato-Regular.ttf in Resources */,
 				5D1E988A2C996303001FA1CF /* Lato-Light.ttf in Resources */,
 				5D1E988B2C996303001FA1CF /* Lato-ThinItalic.ttf in Resources */,
+				5D24DE1D2D3F929700178F6C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,6 +581,14 @@
 				minimumVersion = 1.15.0;
 			};
 		};
+		5D24DE322D43738100178F6C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.7.0;
+			};
+		};
 		62D84C972C9957C800E56E56 /* XCRemoteSwiftPackageReference "R" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mac-cain13/R.swift";
@@ -582,6 +604,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5D1E985D2C942052001FA1CF /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
+		};
+		5D24DE332D43738100178F6C /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D24DE322D43738100178F6C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		5D24DE352D43738100178F6C /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D24DE322D43738100178F6C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		5D24DE372D43738100178F6C /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D24DE322D43738100178F6C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
 		};
 		62D84C982C9957C800E56E56 /* RswiftLibrary */ = {
 			isa = XCSwiftPackageProductDependency;
