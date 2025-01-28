@@ -6,13 +6,17 @@
 //
 
 import SwiftUI
-
 import RswiftResources
+import Firebase
 
 struct QuizView: View {
     @Environment(\.dismiss) private var dismiss
     @StateObject private var viewModel = QuizViewModel()
     @State private var savePhotoAlert: Bool = false
+    // 랭킹 퍼센트
+    @State private var rankingPercent: Int = 0
+    // 랭킹 로딩 상태
+    @State private var isCalculatingRank: Bool = true
     
     let columns: [GridItem] = [
         GridItem(.flexible()),
@@ -22,37 +26,48 @@ struct QuizView: View {
     var body: some View {
         Group {
             if viewModel.showResult {
-                VStack(spacing: 50) {
-                    R.image.마니또.swiftImage
-                        .resizable()
-                        .scaledToFit()
-                    
-                    VStack(spacing: 10) {
-                        Text("🎉 퀴즈 결과 🎉")
-                        Text("총 22문제중에 \(viewModel.score)문제를 맞추셨습니다!")
-                    }
-                    .pretendBold(size: 20)
-                    
-                    HStack(spacing: 16) {
-                        Button("뒤로가기") {
-                            dismiss()
-                        }
-                        .frame(maxWidth: .infinity, minHeight: 50)
-                        .foregroundStyle(.white)
-                        .background(Color.pink.opacity(0.8))
-                        .cornerRadius(10)
+                if isCalculatingRank {
+                    ProgressView("랭킹 계산 중...")
+                } else {
+                    VStack(spacing: 50) {
+                        R.image.마니또.swiftImage
+                            .resizable()
+                            .scaledToFit()
                         
-                        Button("저장하기") {
-                            saveResultImage()
-                            dismiss()
+                        VStack(spacing: 10) {
+                            Text("🎉 퀴즈 결과 🎉")
+                            Text("총 22문제중에 \(viewModel.score)문제를 맞추셨습니다!")
+                            if rankingPercent == 0 {
+                                Text("🥇 상위 1% 이내입니다! 대단해요!")
+                                    .foregroundColor(.orange)
+                            } else {
+                                Text("상위 \(rankingPercent)%입니다! 🎯")
+                                    .foregroundColor(rankingPercent <= 10 ? .green : .blue)
+                            }
                         }
-                        .frame(maxWidth: .infinity, minHeight: 50)
-                        .foregroundStyle(.white)
-                        .background(Color.blue.opacity(0.8))
-                        .cornerRadius(10)
+                        .pretendBold(size: 20)
+                        
+                        HStack(spacing: 16) {
+                            Button("뒤로가기") {
+                                dismiss()
+                            }
+                            .frame(maxWidth: .infinity, minHeight: 50)
+                            .foregroundStyle(.white)
+                            .background(Color.pink.opacity(0.8))
+                            .cornerRadius(10)
+                            
+                            Button("저장하기") {
+                                saveResultImage()
+                                dismiss()
+                            }
+                            .frame(maxWidth: .infinity, minHeight: 50)
+                            .foregroundStyle(.white)
+                            .background(Color.blue.opacity(0.8))
+                            .cornerRadius(10)
+                        }
                     }
+                    .padding(.horizontal, 22)
                 }
-                .padding(.horizontal, 22)
             } else {
                 VStack(spacing: 10) {
                     Image(viewModel.currentQuestion.imageName)
@@ -91,6 +106,9 @@ struct QuizView: View {
                 .padding(.horizontal, 22)
             }
         }
+        .onChange(of: viewModel.showResult) {
+            calculateRanking()
+        }
         .navigationTitle("\(viewModel.currentQuestionIndex + 1) / 22번째 문제")
         .alert(isPresented: $savePhotoAlert) {
             Alert(title: Text("저장 완료"), message: Text("이미지가 저장되었습니다."), dismissButton: .default(Text("확인")))
@@ -101,6 +119,36 @@ struct QuizView: View {
         let image = self.asUIImage() // 캡처
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil) // 앨범에 저장
         savePhotoAlert = true
+    }
+    
+    private func calculateRanking() {
+        let db = Firestore.firestore()
+        let userScore = viewModel.score
+        
+        // 1. 점수 업로드
+        db.collection("quizScores").addDocument(data: ["score": userScore]) { error in
+            guard error == nil else {
+                print("점수 업로드 에러! : \(error!.localizedDescription)")
+                isCalculatingRank = false
+                return
+            }
+            
+            // 2. 전체 점수 가져오기
+            db.collection("quizScores").getDocuments { snapshot, error in
+                guard let documents = snapshot?.documents, error == nil else {
+                    print("점수 가져오기 에러! : \(error!.localizedDescription)")
+                    isCalculatingRank = false
+                    return
+                }
+                let scores = documents.compactMap { $0.data()["score"] as? Int }
+                
+                // 3. 상위 퍼센트 계산
+                let higherScores = scores.filter { $0 > userScore }.count
+                let totalUsers = scores.count
+                self.rankingPercent = Int((Double(higherScores) / Double(totalUsers)) * 100)
+                self.isCalculatingRank = false
+            }
+        }
     }
 }
 
