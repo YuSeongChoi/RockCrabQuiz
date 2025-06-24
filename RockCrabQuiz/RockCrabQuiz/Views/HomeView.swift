@@ -15,10 +15,7 @@ struct HomeView: View {
             Text("바위게 퀴즈 - 무대의상 맞추기")
                 .pretendSemiBold(size: 22)
             
-            R.image.마니또.swiftImage
-                .resizable()
-                .scaledToFit()
-                .cornerRadius(10)
+            AsyncRemoteImage(urlString: "https://raw.githubusercontent.com/YuSeongChoi/qwer-images/main/qwer/마니또.jpg")
             
             NavigationLink {
                 QuizView()
@@ -38,8 +35,4 @@ struct HomeView: View {
         }
         .padding(EdgeInsets(top: 35, leading: 22, bottom: 35, trailing: 22))
     }
-}
-
-#Preview {
-    HomeView()
 }

@@ -24,15 +24,13 @@ struct QuizView: View {
     ]
     
     var body: some View {
-        Group {
+        ZStack {
             if viewModel.showResult {
                 if isCalculatingRank {
                     ProgressView("랭킹 계산 중...")
                 } else {
                     VStack(spacing: 50) {
-                        R.image.마니또.swiftImage
-                            .resizable()
-                            .scaledToFit()
+                        AsyncRemoteImage(urlString: "https://raw.githubusercontent.com/YuSeongChoi/qwer-images/main/qwer/마니또.jpg")
                         
                         VStack(spacing: 10) {
                             Text("🎉 퀴즈 결과 🎉")
@@ -70,11 +68,9 @@ struct QuizView: View {
                 }
             } else {
                 VStack(spacing: 10) {
-                    Image(viewModel.currentQuestion.imageName)
-                        .resizable()
-                        .scaledToFit()
+                    AsyncRemoteImage(urlString: viewModel.currentQuestion.imageURL)
                         .cornerRadius(10)
-                        .animation(.default, value: viewModel.currentQuestion.imageName)
+                        .animation(.default, value: viewModel.currentQuestion.imageURL)
                     
                     LazyVGrid(columns: columns, spacing: 10) {
                         ForEach(0..<4, id: \.self) { index in

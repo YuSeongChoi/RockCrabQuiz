@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D10C4BA2E0A7EC6002172AE /* AsyncRemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D10C4B92E0A7EC6002172AE /* AsyncRemoteImage.swift */; };
 		5D1E984F2C9411F3001FA1CF /* RockTurtleQuizApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1E984E2C9411F3001FA1CF /* RockTurtleQuizApp.swift */; };
 		5D1E98532C9411F4001FA1CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D1E98522C9411F4001FA1CF /* Assets.xcassets */; };
 		5D1E98572C9411F4001FA1CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D1E98562C9411F4001FA1CF /* Preview Assets.xcassets */; };
@@ -47,6 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D10C4B92E0A7EC6002172AE /* AsyncRemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncRemoteImage.swift; sourceTree = "<group>"; };
 		5D1E984B2C9411F3001FA1CF /* RockCrabQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RockCrabQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D1E984E2C9411F3001FA1CF /* RockTurtleQuizApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockTurtleQuizApp.swift; sourceTree = "<group>"; };
 		5D1E98522C9411F4001FA1CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,6 +102,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D10C4B82E0A7EB9002172AE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5D10C4B92E0A7EC6002172AE /* AsyncRemoteImage.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		5D1E98422C9411F3001FA1CF = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				5DE024212C9D608A00472395 /* Info.plist */,
+				5D10C4B82E0A7EB9002172AE /* Common */,
 				5D5447CE2D2D005C009CFEF5 /* Extensions */,
 				62D84C9D2C995C8E00E56E56 /* App */,
 				5D1E98612C942F13001FA1CF /* Reducers */,
@@ -329,6 +340,7 @@
 				62D84CB22C9961CE00E56E56 /* RockTurtleQuizResources.swift in Sources */,
 				5DE0241C2C9D118100472395 /* QuizViewModel.swift in Sources */,
 				62D84CB52C99659A00E56E56 /* SwiftUI+Resources.swift in Sources */,
+				5D10C4BA2E0A7EC6002172AE /* AsyncRemoteImage.swift in Sources */,
 				5D1E984F2C9411F3001FA1CF /* RockTurtleQuizApp.swift in Sources */,
 				62D84CB02C9960DC00E56E56 /* WindowDelegate.swift in Sources */,
 				62D84CB82C9968DC00E56E56 /* HomeView.swift in Sources */,
@@ -474,12 +486,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"RockCrabQuiz/Preview Content\"";
-				DEVELOPMENT_TEAM = 8N7PD4AXR6;
+				DEVELOPMENT_TEAM = 23Z89DEDAB;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RockCrabQuiz/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "바위게 퀴즈";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "퀴즈 결과를 저장하기 위해 사진 앨범에 접근합니다.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -499,7 +512,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ys.RockCrabQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -517,12 +531,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"RockCrabQuiz/Preview Content\"";
-				DEVELOPMENT_TEAM = 8N7PD4AXR6;
+				DEVELOPMENT_TEAM = 23Z89DEDAB;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RockCrabQuiz/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "바위게 퀴즈";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "퀴즈 결과를 저장하기 위해 사진 앨범에 접근합니다.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -542,7 +557,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ys.RockCrabQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
