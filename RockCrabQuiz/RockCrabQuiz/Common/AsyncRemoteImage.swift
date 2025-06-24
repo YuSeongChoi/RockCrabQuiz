@@ -9,27 +9,34 @@ import SwiftUI
 
 struct AsyncRemoteImage: View {
     let urlString: String
-    var placeholder: AnyView = AnyView(ProgressView())
-    var errorImage: AnyView = AnyView(Image(systemName: "photo"))
     
     var body: some View {
         if let url = URL(string: urlString) {
-            AsyncImage(url: url) { phase in
+            AsyncImage(
+                url: url,
+                transaction: Transaction(animation: .easeInOut(duration: 0.3))
+            ) { phase in
                 switch phase {
-                case .empty:
-                    placeholder
-                case .success(let image):
-                    image
-                        .resizable()
-                        .scaledToFit()
+                case .success(let img):
+                    ZStack {
+                        Color.white
+                        
+                        img
+                            .resizable()
+                            .scaledToFit()
+                            .cornerRadius(10)
+                            .transition(.opacity)
+                    }
                 case .failure:
-                    errorImage
-                @unknown default:
-                    errorImage
+                  Image(systemName: "photo")
+                default:
+                  ZStack { Color.gray.opacity(0.2); ProgressView() }
                 }
             }
+            .cornerRadius(10)
+            .id(urlString)
         } else {
-            errorImage
+            Image(systemName: "photo")
         }
     }
 }

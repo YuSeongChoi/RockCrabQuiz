@@ -69,8 +69,6 @@ struct QuizView: View {
             } else {
                 VStack(spacing: 10) {
                     AsyncRemoteImage(urlString: viewModel.currentQuestion.imageURL)
-                        .cornerRadius(10)
-                        .animation(.default, value: viewModel.currentQuestion.imageURL)
                     
                     LazyVGrid(columns: columns, spacing: 10) {
                         ForEach(0..<4, id: \.self) { index in
