@@ -19,6 +19,9 @@ struct HomeView: View {
             
             NavigationLink {
                 QuizView()
+                    .onAppear {
+                        Analytics.logEvent("quiz_start", parameters: nil)
+                    }
             } label: {
                 RoundedRectangle(cornerRadius: 10)
                     .frame(maxWidth: .infinity)

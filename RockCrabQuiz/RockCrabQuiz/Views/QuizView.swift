@@ -85,6 +85,10 @@ struct QuizView: View {
                 .cornerRadius(10)
                 
                 Button("저장하기") {
+                    Analytics.logEvent("screenshot_saved", parameters: [
+                            "score": viewModel.score
+                        ])
+                    
                     guard let view = snapshotTargetView else { return }
                     
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
@@ -125,11 +129,6 @@ struct QuizView: View {
             LazyVGrid(columns: columns, spacing: 10) {
                 ForEach(0..<4, id: \.self) { index in
                     Button {
-                        Analytics.logEvent("question_answered", parameters: [
-                            "question_index": viewModel.currentQuestionIndex + 1,
-                            "selected_answer": index + 1,
-                            "is_correct": viewModel.currentQuestion.correctAnswer == index + 1
-                        ])
                         viewModel.selectAnswer(index + 1)
                     } label: {
                         Text(viewModel.currentQuestion.options[index])
@@ -143,6 +142,12 @@ struct QuizView: View {
             }
             
             Button {
+                Analytics.logEvent("question_answered", parameters: [
+                    "question_index": viewModel.currentQuestionIndex + 1,
+                    "selected_answer": viewModel.selectedAnswer ?? -1,
+                    "is_correct": viewModel.currentQuestion.correctAnswer == viewModel.selectedAnswer
+                ])
+                
                 viewModel.nextQuestion()
             } label: {
                 Text("다음")
@@ -185,11 +190,12 @@ struct QuizView: View {
                 let higherScores = scores.filter { $0 > userScore }.count
                 let totalUsers = scores.count
                 self.rankingPercent = Int((Double(higherScores) / Double(totalUsers)) * 100)
+                self.isCalculatingRank = false
+                
                 Analytics.logEvent("quiz_finished", parameters: [
                     "score": userScore,
                     "ranking_percent": self.rankingPercent
                 ])
-                self.isCalculatingRank = false
             }
         }
     }
