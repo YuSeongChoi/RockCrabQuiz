@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5D10C4BA2E0A7EC6002172AE /* AsyncRemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D10C4B92E0A7EC6002172AE /* AsyncRemoteImage.swift */; };
+		5D10C4D32E0A88FC002172AE /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D10C4D22E0A88FC002172AE /* View+Extension.swift */; };
 		5D1E984F2C9411F3001FA1CF /* RockTurtleQuizApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1E984E2C9411F3001FA1CF /* RockTurtleQuizApp.swift */; };
 		5D1E98532C9411F4001FA1CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D1E98522C9411F4001FA1CF /* Assets.xcassets */; };
 		5D1E98572C9411F4001FA1CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D1E98562C9411F4001FA1CF /* Preview Assets.xcassets */; };
@@ -38,6 +39,8 @@
 		5D24DE382D43738100178F6C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 5D24DE372D43738100178F6C /* FirebaseFirestore */; };
 		5D5447D02D2D0112009CFEF5 /* SwiftUI+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5447CF2D2D0112009CFEF5 /* SwiftUI+Extension.swift */; };
 		5DE0241C2C9D118100472395 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE0241B2C9D118100472395 /* QuizViewModel.swift */; };
+		5DE2314C2E2A2BA300DC2603 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE2314B2E2A2BA300DC2603 /* ImageSaver.swift */; };
+		5DE231502E2A2BBC00DC2603 /* CaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE2314F2E2A2BBC00DC2603 /* CaptureView.swift */; };
 		62D84C992C9957C800E56E56 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 62D84C982C9957C800E56E56 /* RswiftLibrary */; };
 		62D84CAD2C99608300E56E56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D84CAC2C99608300E56E56 /* AppDelegate.swift */; };
 		62D84CB02C9960DC00E56E56 /* WindowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D84CAF2C9960DC00E56E56 /* WindowDelegate.swift */; };
@@ -49,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		5D10C4B92E0A7EC6002172AE /* AsyncRemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncRemoteImage.swift; sourceTree = "<group>"; };
+		5D10C4D22E0A88FC002172AE /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		5D1E984B2C9411F3001FA1CF /* RockCrabQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RockCrabQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D1E984E2C9411F3001FA1CF /* RockTurtleQuizApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockTurtleQuizApp.swift; sourceTree = "<group>"; };
 		5D1E98522C9411F4001FA1CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 		5D5447CF2D2D0112009CFEF5 /* SwiftUI+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI+Extension.swift"; sourceTree = "<group>"; };
 		5DE0241B2C9D118100472395 /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
 		5DE024212C9D608A00472395 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DE2314B2E2A2BA300DC2603 /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
+		5DE2314F2E2A2BBC00DC2603 /* CaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureView.swift; sourceTree = "<group>"; };
 		62D84CAC2C99608300E56E56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62D84CAF2C9960DC00E56E56 /* WindowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowDelegate.swift; sourceTree = "<group>"; };
 		62D84CB12C9961CE00E56E56 /* RockTurtleQuizResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockTurtleQuizResources.swift; sourceTree = "<group>"; };
@@ -106,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				5D10C4B92E0A7EC6002172AE /* AsyncRemoteImage.swift */,
+				5DE2314B2E2A2BA300DC2603 /* ImageSaver.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -157,6 +164,7 @@
 				62D84CB72C9968DC00E56E56 /* HomeView.swift */,
 				5D1E98632C942F2C001FA1CF /* QuizView.swift */,
 				5DE0241B2C9D118100472395 /* QuizViewModel.swift */,
+				5DE2314F2E2A2BBC00DC2603 /* CaptureView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -198,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				5D5447CF2D2D0112009CFEF5 /* SwiftUI+Extension.swift */,
+				5D10C4D22E0A88FC002172AE /* View+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -337,6 +346,7 @@
 				62D84CBE2C996BB100E56E56 /* Quiz.swift in Sources */,
 				62D84CAD2C99608300E56E56 /* AppDelegate.swift in Sources */,
 				5D5447D02D2D0112009CFEF5 /* SwiftUI+Extension.swift in Sources */,
+				5DE2314C2E2A2BA300DC2603 /* ImageSaver.swift in Sources */,
 				62D84CB22C9961CE00E56E56 /* RockTurtleQuizResources.swift in Sources */,
 				5DE0241C2C9D118100472395 /* QuizViewModel.swift in Sources */,
 				62D84CB52C99659A00E56E56 /* SwiftUI+Resources.swift in Sources */,
@@ -344,8 +354,10 @@
 				5D1E984F2C9411F3001FA1CF /* RockTurtleQuizApp.swift in Sources */,
 				62D84CB02C9960DC00E56E56 /* WindowDelegate.swift in Sources */,
 				62D84CB82C9968DC00E56E56 /* HomeView.swift in Sources */,
+				5D10C4D32E0A88FC002172AE /* View+Extension.swift in Sources */,
 				5D1E98642C942F2C001FA1CF /* QuizView.swift in Sources */,
 				5D1E98662C942F32001FA1CF /* QuizReducer.swift in Sources */,
+				5DE231502E2A2BBC00DC2603 /* CaptureView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

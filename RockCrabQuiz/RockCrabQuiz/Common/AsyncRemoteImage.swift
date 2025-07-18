@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AsyncRemoteImage: View {
     let urlString: String
+    var onSuccess: () -> Void = {}
     
     var body: some View {
         if let url = URL(string: urlString) {
@@ -26,6 +27,9 @@ struct AsyncRemoteImage: View {
                             .scaledToFit()
                             .cornerRadius(10)
                             .transition(.opacity)
+                            .onAppear {
+                                onSuccess()
+                            }
                     }
                 case .failure:
                   Image(systemName: "photo")
