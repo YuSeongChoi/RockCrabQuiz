@@ -36,6 +36,7 @@ SwiftUI와 Firebase Analytics 기반으로 제작되었습니다.
   <img src="RockCrabQuiz/media/quiz_rank.png" alt="퀴즈 랭킹 화면" width="250" height="auto"/>
   <img src="RockCrabQuiz/media/quiz_result.png" alt="퀴즈 결과 화면" width="250" height="auto"/>
   <img src="RockCrabQuiz/media/quiz_screenshot.png" alt="퀴즈 스샷 화면" width="250" height="auto"/>
+  <img src="RockCrabQuiz/media/quiz_album.png" alt="퀴즈 앨범 화면" width="250" height="auto"/>
 </p>
 
 ---
