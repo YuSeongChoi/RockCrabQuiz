@@ -30,12 +30,13 @@ SwiftUI와 Firebase Analytics 기반으로 제작되었습니다.
 
 <p align="center">
   <img src="RockCrabQuiz/media/main.png" alt="퀴즈 메인 화면" width="250" height="auto"/>
-  <img src="media/quiz-select.png" alt="퀴즈 선택 화면" width="300" height="auto"/>
-  <img src="media/quiz-result.png" alt="퀴즈 결과 화면" width="300" height="auto"/>
+  <img src="RockCrabQuiz/media/quiz.png" alt="퀴즈 화면" width="250" height="auto"/>
+  <img src="RockCrabQuiz/media/quiz_back.png" alt="퀴즈 이전 화면" width="250" height="auto"/>
+  <img src="RockCrabQuiz/media/quiz_next.png" alt="퀴즈 다음 화면" width="250" height="auto"/>
+  <img src="RockCrabQuiz/media/quiz_rank.png" alt="퀴즈 랭킹 화면" width="250" height="auto"/>
+  <img src="RockCrabQuiz/media/quiz_result.png" alt="퀴즈 결과 화면" width="250" height="auto"/>
+  <img src="RockCrabQuiz/media/quiz_screenshot.png" alt="퀴즈 스샷 화면" width="250" height="auto"/>
 </p>
-
-![퀴즈 메인 화면](RockCrabQuiz/media/main.png)
-![결과 화면 + 스크린샷 버튼](media/result_screen.png)
 
 ---
 
