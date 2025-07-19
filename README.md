@@ -26,7 +26,7 @@ SwiftUI와 Firebase Analytics 기반으로 제작되었습니다.
 
 ## 📸 데모 스크린샷
 
-![퀴즈 진행 화면](media/quiz_screen.png)
+![퀴즈 메인 화면](media/quiz_main.png)
 ![결과 화면 + 스크린샷 버튼](media/result_screen.png)
 
 ---
