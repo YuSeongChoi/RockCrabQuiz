@@ -29,7 +29,7 @@ SwiftUI와 Firebase Analytics 기반으로 제작되었습니다.
 ## 📱 앱 화면 미리보기
 
 <p align="center">
-  <img src="RockCrabQuiz/media/main." alt="퀴즈 메인 화면" width="250" height="auto"/>
+  <img src="RockCrabQuiz/media/main.png" alt="퀴즈 메인 화면" width="250" height="auto"/>
   <img src="media/quiz-select.png" alt="퀴즈 선택 화면" width="300" height="auto"/>
   <img src="media/quiz-result.png" alt="퀴즈 결과 화면" width="300" height="auto"/>
 </p>
