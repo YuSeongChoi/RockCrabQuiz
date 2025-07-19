@@ -26,7 +26,7 @@ SwiftUI와 Firebase Analytics 기반으로 제작되었습니다.
 
 ## 📸 데모 스크린샷
 
-![퀴즈 메인 화면](RockCrabQuiz/media/quiz_main.png)
+![퀴즈 메인 화면](RockCrabQuiz/media/main.png)
 ![결과 화면 + 스크린샷 버튼](media/result_screen.png)
 
 ---
