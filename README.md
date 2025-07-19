@@ -41,4 +41,3 @@ SwiftUI와 Firebase Analytics 기반으로 제작되었습니다.
 2.	RockTurtleQuiz.xcodeproj / .xcworkspace 열기
 3.	Xcode에서 Signing & Capabilities → Team 설정
 4.	기기 또는 시뮬레이터에서 실행
-5.	Firebase 로그는 DebugView에서 실시간 확인 가능
