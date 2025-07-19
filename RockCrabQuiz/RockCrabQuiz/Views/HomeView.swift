@@ -36,7 +36,7 @@ struct HomeView: View {
             
             Spacer()
             Text("※ 본 앱은 QWER과 무관한 팬 제작 콘텐츠입니다.\n상업적 목적이 없으며, 사진의 모든 저작권은 3Y Corporation과 프리즘필터 및 QWER에게 있습니다.")
-                .pretendMid(size: 13)
+                .pretendMid(size: 11)
                 .foregroundStyle(Color(red: 111/255, green: 111/255, blue: 111/255))
                 .multilineTextAlignment(.center)
         }

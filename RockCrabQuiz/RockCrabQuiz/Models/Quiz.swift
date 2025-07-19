@@ -52,7 +52,7 @@ extension Question {
         ),
         .init(
             imageURL: "https://raw.githubusercontent.com/YuSeongChoi/qwer-images/main/qwer/경기모아뮤직페스티벌.jpeg",
-            correctAnswer: 4,
+            correctAnswer: 3,
             options: ["강진하맥축제", "카스쿨 페스티벌", "경기모아 뮤직 페스티벌", "서울팝콘"]
         ),
         .init(

@@ -133,30 +133,38 @@ struct QuizView: View {
                     } label: {
                         Text(viewModel.currentQuestion.options[index])
                             .frame(maxWidth: .infinity, minHeight: 50)
+                            .pretendSemiBold(size: 18)
                             .padding()
-                            .background(viewModel.selectedAnswer == index + 1 ? Color.green : Color.blue)
+                            .background(viewModel.selectedAnswer == index + 1 ? Color.green.opacity(0.7) : Color.blue.opacity(0.7))
                             .foregroundStyle(.white)
                             .cornerRadius(10)
                     }
                 }
             }
             
-            Button {
-                Analytics.logEvent("question_answered", parameters: [
-                    "question_index": viewModel.currentQuestionIndex + 1,
-                    "selected_answer": viewModel.selectedAnswer ?? -1,
-                    "is_correct": viewModel.currentQuestion.correctAnswer == viewModel.selectedAnswer
-                ])
+            HStack(spacing: 10) {
+                Button("이전") {
+                    viewModel.previousQuestion()
+                }
+                .frame(maxWidth: .infinity, minHeight: 50)
+                .foregroundStyle(.white)
+                .background(viewModel.currentQuestionIndex == 0 ? Color.gray : Color.pink.opacity(0.8))
+                .cornerRadius(10)
+                .disabled(viewModel.currentQuestionIndex == 0)
                 
-                viewModel.nextQuestion()
-            } label: {
-                Text("다음")
-                    .frame(maxWidth: .infinity, minHeight: 50)
-                    .foregroundStyle(.white)
-                    .background(viewModel.selectedAnswer == nil ? Color.gray : Color.pink.opacity(0.8))
-                    .cornerRadius(10)
+                Button {
+                    viewModel.nextQuestion()
+                    print("선택된 답들 : \(viewModel.selectedAnswers)")
+                    print("현재 점수 : \(viewModel.scores)")
+                } label: {
+                    Text("다음")
+                        .frame(maxWidth: .infinity, minHeight: 50)
+                        .foregroundStyle(.white)
+                        .background(viewModel.selectedAnswer == nil ? Color.gray : Color.indigo.opacity(0.8))
+                        .cornerRadius(10)
+                }
+                .disabled(viewModel.selectedAnswer == nil)
             }
-            .disabled(viewModel.selectedAnswer == nil)
         }
         .pretendReg(size: 18)
         .padding(.horizontal, 22)
