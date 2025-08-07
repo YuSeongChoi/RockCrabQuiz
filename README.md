@@ -1,4 +1,4 @@
-# 🎯 RockTurtleQuiz
+# 🎯 RockCrabQuiz
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Platform: iOS](https://img.shields.io/badge/Platform-iOS-lightgrey.svg)]
@@ -8,7 +8,7 @@
 
 ## 📖 소개
 
-`RockTurtleQuiz`는 **QWER** 팬(바위게)들을 위한 **팬메이드 아이템 맞추기 퀴즈 앱**입니다.
+`RockCrabQuiz`는 **QWER** 팬(바위게)들을 위한 **팬메이드 아이템 맞추기 퀴즈 앱**입니다.
 SwiftUI와 Firebase Analytics 기반으로 제작되었습니다.
 
 ---
